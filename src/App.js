@@ -43,6 +43,22 @@ function App() {
     })
   }
 
+  const addTodo = async () => {
+    const res = await fetch(API_BASE + '/todo/new', {
+      method: 'POST',
+      headers: {
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify({
+        text: newTodo
+      })
+    })
+
+    const data = await res.json()
+
+    console.log(data)
+  }
+
   return (
     <div className="App">
       <h1>Welcome, Eric</h1>
@@ -68,6 +84,7 @@ function App() {
           <div className="content">
             <h3>Add task</h3>
             <input type="text" className="add-todo-input" onChange={e => setNewTodo(e.target.value)} value={newTodo} />
+            <div className="button" onClick={addTodo}>Create Task</div>
           </div>
         </div>) : ''
       }
