@@ -96,7 +96,7 @@ h4 {
   justify-content: center;
   font-weight: 700;
 }
-/* 
+
 .addPopup {
   position: fixed;
   bottom: 32px;
@@ -119,7 +119,7 @@ h4 {
   );
   cursor: pointer;
 }
-
+/*
 .popup {
   position: fixed;
   top: 50%;
