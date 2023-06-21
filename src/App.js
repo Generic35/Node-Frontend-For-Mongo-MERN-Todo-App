@@ -56,7 +56,9 @@ function App() {
 
     const data = await res.json()
 
-    console.log(data)
+    setTodos([...todos, data])
+    setPopupActive(false)
+    setNewTodo("")
   }
 
   return (
